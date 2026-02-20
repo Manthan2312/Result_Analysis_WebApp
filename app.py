@@ -299,4 +299,4 @@ def download_pdf(enrollment):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
