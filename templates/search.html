@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Search Student</h2>
+
+<form method="GET" action="/student" class="row g-3">
+    <div class="col-md-5">
+        <input name="enrollment" class="form-control" placeholder="Enter Enrollment Number">
+    </div>
+
+    <div class="col-md-3">
+        <button class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+{% endblock %}

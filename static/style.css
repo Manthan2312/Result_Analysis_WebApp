@@ -1,0 +1,201 @@
+/* ------------------------------
+  GLOBAL STYLING
+------------------------------*/
+body {
+    background: #f5f7ff;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container spacing */
+.container {
+    padding: 20px;
+}
+
+/* ------------------------------
+   SIDEBAR
+------------------------------*/
+.sidebar {
+    width: 250px;
+    background: #1e293b;
+    height: 100vh;
+    padding: 30px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 10px;
+    color: #d8e3ff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* ------------------------------
+   CONTENT WRAPPER
+------------------------------*/
+.content {
+    margin-left: 270px;
+    padding: 30px;
+}
+
+/* ------------------------------
+   CARDS
+------------------------------*/
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.card h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------
+   SEARCH BOXES
+------------------------------*/
+input.form-control {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    transition: 0.2s;
+}
+
+input.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 4px rgba(59,130,246,0.4);
+}
+
+/* ------------------------------
+   BUTTONS
+------------------------------*/
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2563eb;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+.btn-success {
+    background: #059669;
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #047857;
+}
+
+/* ------------------------------
+   TABLE STYLING
+------------------------------*/
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th {
+    background: #e2e8f0;
+    padding: 10px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ------------------------------
+   CHART RESPONSIVE
+------------------------------*/
+.chart-container img {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+    margin: auto;
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE FIXES
+------------------------------*/
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    table th, table td {
+        font-size: 13px;
+    }
+
+    .chart-container img {
+        max-width: 100%;
+    }
+}

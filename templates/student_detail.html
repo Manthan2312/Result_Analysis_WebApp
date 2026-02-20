@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="mb-4">Student Details</h2>
+
+<div class="card p-4">
+    <p><b>Enrollment:</b> {{ student.EnrollmentNo }}</p>
+    <p><b>Roll No:</b> {{ student.RollNo }}</p>
+    <p><b>Total Marks:</b> {{ student.Obtain }}</p>
+    <p><b>SGPA:</b> {{ student["SGPA V"] }}</p>
+</div>
+
+<h4 class="mt-4">Subject-wise Marks</h4>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Internal</th>
+            <th>External</th>
+            <th>Total</th>
+            <th>Grade</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for s in subject_data %}
+        <tr>
+            <td>{{ s.name }}</td>
+            <td>{{ s.internal }}</td>
+            <td>{{ s.external }}</td>
+            <td>{{ s.total }}</td>
+            <td>{{ s.grade }}</td>
+            <td>{{ s.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h4 class="mt-4">Performance Chart</h4>
+<img src="/{{ pie_chart }}" width="500">
+
+<a href="/download/{{ student.EnrollmentNo }}" class="btn btn-success mt-4">Download PDF</a>
+
+{% endblock %}

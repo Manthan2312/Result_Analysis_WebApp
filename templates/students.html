@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="mb-3">All Students</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Enrollment</th>
+            <th>Roll No</th>
+            <th>Total Marks</th>
+            <th>SGPA</th>
+            <th>View</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for s in students %}
+        <tr>
+            <td>{{ s.EnrollmentNo }}</td>
+            <td>{{ s.RollNo }}</td>
+            <td>{{ s.Obtain }}</td>
+            <td>{{ s["SGPA V"] }}</td>
+            <td><a class="btn btn-primary" href="/student?enrollment={{ s.EnrollmentNo }}">View</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="pagination">
+    {% if page > 1 %}
+    <a href="/students?page={{ page - 1 }}" class="btn btn-dark">Previous</a>
+    {% endif %}
+
+    {% if page < total_pages %}
+    <a href="/students?page={{ page + 1 }}" class="btn btn-dark">Next</a>
+    {% endif %}
+</div>
+
+{% endblock %}
